@@ -42,7 +42,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;
+  --nav-color: #000;
   /* The default color of the main navmenu links */
   --nav-hover-color: #ffb03b;
   /* Applied to main navmenu links when they are hovered over or active */
@@ -107,8 +107,9 @@ h6 {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  margin: -30px -20px 0px 0px;
+  width: 160px;
+  height: 160px;
 }
 
 /* Pulsating Play Button
@@ -246,13 +247,14 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --background-color: #fff;
+  --default-color: #000;
+  --heading-color: #000;
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
   background-color: var(--background-color);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header .topbar {
@@ -331,7 +333,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(255, 255, 255, 0.85);
+  --background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   /*rgba(21, 17, 13, 0.85)*/
 }
@@ -340,6 +342,7 @@ h6 {
   color: black;
 }
 .scrolled .sitename {
+  text-align: left !important;
   color: black !important;
 }
 
@@ -823,6 +826,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   padding: 0;
+  margin-top: 22vh;
 }
 
 .hero .carousel {
@@ -830,7 +834,7 @@ section,
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   position: relative;
 }
 
@@ -848,14 +852,14 @@ section,
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
 .hero .carousel-item:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  background: color-mix(in srgb, var(--background-color), transparent 100%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1701,4 +1705,129 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Contact from magizhagam
+--------------------------------------------------------------*/
+.contact .info-box {
+  color: #444444;
+  background: #fafbff;
+  padding: 30px;
+}
+
+.contact .info-box i {
+  font-size: 38px;
+  line-height: 0;
+  color: #4154f1;
+}
+
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #012970;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+}
+
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.contact .php-email-form {
+  background: #fafbff;
+  padding: 30px;
+  height: 100%;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 0;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: linear-gradient(#ffde59,#ff914d);
+}
+
+.contact .php-email-form input[type=text],
+.contact .php-email-form input[type=email] {
+  padding: 10px 15px;
+}
+
+.contact .php-email-form textarea {
+  padding: 12px 15px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: linear-gradient(#ffde59,#ff914d);
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: linear-gradient(#ffde59,#ff914d);
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
