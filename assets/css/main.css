@@ -107,7 +107,11 @@ h6 {
 }
 
 .logo {
-  margin: -30px -20px 0px 0px;
+  position: absolute;
+  top: -35px;
+  background: url('/assets/img/logo.png') no-repeat;
+  background-size: cover;
+  background-position: center;
   width: 160px;
   height: 160px;
 }
@@ -341,6 +345,7 @@ h6 {
 .scrolled .navmenu a:not(a:focus) {
   color: black;
 }
+
 .scrolled .sitename {
   text-align: left !important;
   color: black !important;
@@ -791,7 +796,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -826,7 +831,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   padding: 0;
-  margin-top: 22vh;
+  margin-top: 15.7vh;
 }
 
 .hero .carousel {
@@ -1303,7 +1308,7 @@ section,
 }
 
 .events .swiper-pagination {
-  margin-top: 30px;
+  margin-top: 20px;
   position: relative;
 }
 
@@ -1797,7 +1802,7 @@ section,
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: linear-gradient(#ffde59,#ff914d);
+  border-color: linear-gradient(#ffde59, #ff914d);
 }
 
 .contact .php-email-form input[type=text],
@@ -1810,7 +1815,7 @@ section,
 }
 
 .contact .php-email-form button[type=submit] {
-  background: linear-gradient(#ffde59,#ff914d);
+  background: linear-gradient(#ffde59, #ff914d);
   border: 0;
   padding: 10px 30px;
   color: #fff;
@@ -1819,7 +1824,7 @@ section,
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: linear-gradient(#ffde59,#ff914d);
+  background: linear-gradient(#ffde59, #ff914d);
 }
 
 @keyframes animate-loading {
